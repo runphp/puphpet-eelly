@@ -119,7 +119,7 @@ nginx:
         names_hash_bucket_size: 128
     upstreams: {  }
     vhosts:
-        nxv_pwpvu4herpzz:
+        www_eelly_dev:
             server_name: eelly.dev
             server_aliases:
                 - www.eelly.dev
