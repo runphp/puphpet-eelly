@@ -129,6 +129,7 @@ nginx:
             server_name: eelly.dev
             server_aliases:
                 - www.eelly.dev
+                - static.eelly.dev
             www_root: /var/www/www.eelly.dev
             listen_port: '80'
             client_max_body_size: 1m
@@ -263,7 +264,7 @@ php:
                 security.limit_extensions: .php
                 user: www-user
                 group: www-data
-    composer: '0'
+    composer: '1'
     composer_home: ''
 xdebug:
     install: '0'
