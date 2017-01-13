@@ -244,7 +244,10 @@ php:
             - mcrypt
             - mysqlnd
         pear: {  }
-        pecl: {  }
+        pecl:
+            - redis
+            - mongo
+            - mongodb
     ini:
         display_errors: 'On'
         error_reporting: '-1'
