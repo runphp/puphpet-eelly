@@ -244,6 +244,8 @@ php:
             - mbstring
             - mcrypt
             - mysqlnd
+            - igbinary
+            - amqp
         pear: {  }
         pecl:
             - redis

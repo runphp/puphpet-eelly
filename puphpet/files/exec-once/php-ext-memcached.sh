@@ -14,8 +14,9 @@ cd ..
 cp /vagrant/install/php/memcached-2.2.0.tgz ./
 tar xzf memcached-2.2.0.tgz
 cd memcached-2.2.0
+phpize
 php-config
-./configure --disable-memcached-sasl
+./configure --disable-memcached-sasl --enable-memcached-igbinary
 make
 make install
 service php-fpm restart
