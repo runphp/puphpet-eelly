@@ -4,12 +4,11 @@ Vagrant development environment for eelly phper, built using PuPHPet
 ## info
 
 * centos7
-* php5.5
-* php-ext-memcached2.2.0
-* php-ext-mongodb1.2.2
-* php-ext-mongo1.6.14
-* php-ext-phalcon2.0.13
-* php-ext-redis3.1.0
+* php7.0.x
+* php-ext-memcached3.0.3
+* php-ext-mongodb1.2.6
+* php-ext-phalcon3.0.4
+* php-ext-redis3.1.1
 
 ## command
 ```
