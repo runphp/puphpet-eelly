@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cp /vagrant/install/php/cphalcon-phalcon-v2.0.13.tar.gz  ./
-tar xzf cphalcon-phalcon-v2.0.13.tar.gz
-cd cphalcon-phalcon-v2.0.13/build
+cp /vagrant/install/php/cphalcon-3.0.4.tar.gz ./
+tar xzf cphalcon-3.0.4.tar.gz
+cd cphalcon-3.0.4/build
 ./install
 tee /etc/php.d/phalcon.ini <<< 'extension=phalcon.so'
 service php-fpm restart

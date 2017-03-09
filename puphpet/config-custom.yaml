@@ -235,7 +235,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '5.5'
+        version: '7.0'
     modules:
         php:
             - cli
@@ -249,7 +249,6 @@ php:
         pear: {  }
         pecl:
             - redis
-            - mongo
             - mongodb
     ini:
         display_errors: 'On'
