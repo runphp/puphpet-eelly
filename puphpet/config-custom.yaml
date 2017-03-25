@@ -250,6 +250,7 @@ php:
         pecl:
             - redis
             - mongodb
+            - xdebug
     ini:
         display_errors: 'On'
         error_reporting: '-1'

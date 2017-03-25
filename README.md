@@ -9,6 +9,7 @@ Vagrant development environment for eelly phper, built using PuPHPet
 * php-ext-mongodb1.2.6
 * php-ext-phalcon3.0.4
 * php-ext-redis3.1.1
+* php-ext-swoole2.0.7
 
 ## command
 ```
