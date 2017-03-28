@@ -250,7 +250,6 @@ php:
         pecl:
             - redis
             - mongodb
-            - xdebug
     ini:
         display_errors: 'On'
         error_reporting: '-1'
@@ -269,7 +268,7 @@ php:
     composer: '1'
     composer_home: ''
 xdebug:
-    install: '0'
+    install: '1'
     settings:
         xdebug.default_enable: '1'
         xdebug.remote_autostart: '0'
