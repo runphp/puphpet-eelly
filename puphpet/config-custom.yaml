@@ -246,6 +246,7 @@ php:
             - mysqlnd
             - igbinary
             - amqp
+            - bcmath
         pear: {  }
         pecl:
             - redis
