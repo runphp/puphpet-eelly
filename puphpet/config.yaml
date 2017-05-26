@@ -118,56 +118,7 @@ nginx:
         proxy_read_timeout: 600s
         names_hash_bucket_size: 128
     upstreams: {  }
-    vhosts:
-        www_eelly_dev:
-            server_name: eelly.dev
-            server_aliases:
-                - www.eelly.dev
-            www_root: /var/www/www.eelly.dev
-            listen_port: '80'
-            client_max_body_size: 1m
-            ssl: '0'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_port: '443'
-            ssl_protocols: ''
-            ssl_ciphers: ''
-            rewrite_to_https: '1'
-            spdy: '1'
-            locations:
-                nxvl_f2v2fj8d9e2w:
-                    www_root: ''
-                    location: /
-                    index_files:
-                        - index.html
-                        - index.htm
-                        - index.php
-                    try_files:
-                        - $uri
-                        - $uri/
-                        - /index.php$is_args$args
-                    fastcgi: ''
-                    fastcgi_index: ''
-                    fastcgi_split_path: ''
-                    proxy: ''
-                    proxy_redirect: ''
-                nxvl_qy89n6569ngj:
-                    www_root: ''
-                    location: '~ \.php$'
-                    try_files:
-                        - $uri
-                        - $uri/
-                        - /index.php$is_args$args
-                    fastcgi: '127.0.0.1:9000'
-                    fastcgi_index: index.php
-                    fastcgi_split_path: '^(.+\.php)(/.*)$'
-                    fast_cgi_params_extra:
-                        - 'SCRIPT_FILENAME $request_filename'
-                        - 'APP_ENV dev'
-                    set:
-                        - '$path_info $fastcgi_path_info'
-                    proxy: ''
-                    proxy_redirect: ''
+
     proxies: {  }
 apache:
     install: '0'
