@@ -107,10 +107,10 @@ locale:
             - zh_CN.UTF-8
         timezone: UTC
 firewall:
-    install: '1'
+    install: '0'
     rules: {  }
 cron:
-    install: '1'
+    install: '0'
     jobs: {  }
 nginx:
     install: '1'
@@ -124,57 +124,6 @@ nginx:
         proxy_read_timeout: 600s
         names_hash_bucket_size: 128
     upstreams: {  }
-    vhosts:
-        www_eelly_dev:
-            server_name: eelly.dev
-            server_aliases:
-                - www.eelly.dev
-                - static.eelly.dev
-            www_root: /var/www/www.eelly.dev
-            listen_port: '80'
-            client_max_body_size: 1m
-            ssl: '0'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_port: '443'
-            ssl_protocols: ''
-            ssl_ciphers: ''
-            rewrite_to_https: '1'
-            spdy: '1'
-            locations:
-                nxvl_f2v2fj8d9e2w:
-                    www_root: ''
-                    location: /
-                    index_files:
-                        - index.html
-                        - index.htm
-                        - index.php
-                    try_files:
-                        - $uri
-                        - $uri/
-                        - /index.php$is_args$args
-                    fastcgi: ''
-                    fastcgi_index: ''
-                    fastcgi_split_path: ''
-                    proxy: ''
-                    proxy_redirect: ''
-                nxvl_qy89n6569ngj:
-                    www_root: ''
-                    location: '~ \.php$'
-                    try_files:
-                        - $uri
-                        - $uri/
-                        - /index.php$is_args$args
-                    fastcgi: '127.0.0.1:9000'
-                    fastcgi_index: index.php
-                    fastcgi_split_path: '^(.+\.php)(/.*)$'
-                    fast_cgi_params_extra:
-                        - 'SCRIPT_FILENAME $request_filename'
-                        - 'APP_ENV dev'
-                    set:
-                        - '$path_info $fastcgi_path_info'
-                    proxy: ''
-                    proxy_redirect: ''
     proxies: {  }
 apache:
     install: '0'
@@ -198,7 +147,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '7.1'
+        version: '5.6'
     modules:
         php:
             - cli
@@ -209,7 +158,6 @@ php:
             - mysqlnd
             - igbinary
             - amqp
-            - bcmath
         pear: {  }
         pecl:
             - redis
@@ -229,10 +177,10 @@ php:
                 security.limit_extensions: .php
                 user: www-user
                 group: www-data
-    composer: '1'
+    composer: '0'
     composer_home: ''
 xdebug:
-    install: '1'
+    install: '0'
     settings:
         xdebug.default_enable: '1'
         xdebug.remote_autostart: '0'
@@ -263,7 +211,7 @@ drush:
     install: '0'
     version: 8.0.5
 ruby:
-    install: '1'
+    install: '0'
     versions:
         rv_s447hj3v356z:
             default: '1'
@@ -274,7 +222,7 @@ ruby:
                 - activesupport@4.2.6
                 - vine@0.2
 python:
-    install: '1'
+    install: '0'
     packages: {  }
     versions: {  }
 nodejs:
