@@ -150,6 +150,7 @@ php:
         version: '7.1'
     modules:
         php:
+            - bcmath
             - cli
             - intl
             - xml
