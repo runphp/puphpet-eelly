@@ -147,7 +147,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '5.6'
+        version: '7.1'
     modules:
         php:
             - cli
@@ -158,10 +158,12 @@ php:
             - mysqlnd
             - igbinary
             - amqp
-        pear: {  }
-        pecl:
-            - redis
+            - memcached
             - mongodb
+            - redis
+            - phalcon
+        pear: {  }
+        pecl: {  }
     ini:
         display_errors: 'On'
         error_reporting: '-1'
